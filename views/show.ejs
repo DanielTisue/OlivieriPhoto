@@ -1,0 +1,28 @@
+<% include ./partials/header %>
+
+<div class="container show">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h3>Edit/ or Delete your Photo Federico</h3>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-sm-6">
+            <div class="card bg-dark text-white">
+              <img src="<%= image.url %>" class="card-img img-fluid" alt="image">
+              <div class="card-img-overlay">
+                <div class= "card-text text-center">
+                    <a class="btn btn-outline-light btn-sm" href="/gallery/<%= image._id %>/edit">EDIT</a>
+                    <form action="/gallery/<%= image._id %>?_method=DELETE" style="display:inline;" method="POST">
+                    <button class="btn btn-outline-light btn-sm">DELETE</button>   
+                    </form>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<% include ./partials/footer %>

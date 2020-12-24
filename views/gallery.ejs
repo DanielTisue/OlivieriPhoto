@@ -1,0 +1,52 @@
+<% include ./partials/header %>
+
+
+
+  
+
+
+<div class="container-gallery"> 
+
+  <h2 class="gallery-title">Gallery</h2>
+
+        <% if(currentUser){ %>
+        <div class="add-btn-wrapper">
+            <a href="/gallery/new" class="btn" id="add"><i class="material-icons">add</i>Add a photo</a>
+        </div>
+        <% } %>
+
+     
+          <div class="image-gallery">
+
+                  <% images.forEach(function(image){ %>
+                     <div class="image-gallery-item">
+                        
+                              <img src="<%= image.url %>">
+                           
+                            <% if(currentUser){ %>
+                            <div class="button-wrapper">
+                              <a class="btn" href="/gallery/<%= image._id %>/edit">
+                                <i class="material-icons">
+                                  content_copy
+                                </i>
+                                EDIT
+                              </a>
+                              <form class="delete-form" action="/gallery/<%= image._id %>?_method=DELETE" method="POST">
+                                <button class="btn">
+                                  <i class="material-icons">
+                                    clear
+                                  </i>
+                                  DELETE
+                                </button>
+                              </form>
+                            </div>
+                            <% } %>
+                        
+                    </div>     
+                     
+                  <% }) %>
+      </div>
+</div>  
+    
+     
+<% include ./partials/footer %>

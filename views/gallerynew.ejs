@@ -1,0 +1,17 @@
+<% include ./partials/header %>
+
+<h2 class="edit-title">Select the images you want uploaded </h2>
+
+<div class="edit-container">
+<form class="edit-form" action="/gallery" method="POST" enctype="multipart/form-data">
+    <label for="chooseFile" class="edit-form-item">Choose from folder:</label>
+    <input type="file" class="edit-form-item" name="image" id="chooseFile">
+      <button type="submit" class="edit-form-item submit-btn">Submit</button>
+      
+</form>
+
+
+</div>
+
+<a class="back" href="/gallery"><button class="edit-form-item submit-btn">Back</button></a>
+<% include ./partials/footer %>

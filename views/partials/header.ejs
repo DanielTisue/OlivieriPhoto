@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" minimum-scale="1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+    <title>Olivieri Photo</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  </head>
+
+<body>
+
+
+
+  
+<nav>
+  <!-- Desktop nav bar menu -->
+  <ul class="navbar">
+    <li class="home">
+      <a class="link-text" href="/" >
+        <i class="material-icons">home</i>Home
+      </a>
+    </li>
+    <li class="gallery">
+      <a class="link-text" href="/gallery"><i class="material-icons">view_module</i>Gallery</a>
+    </li>
+    <li class="about">
+      <a class="link-text" href="/#bio-anchor"><i class="material-icons">accessibility_new</i>About</a>
+    </li>
+    <li class="contact">
+      <a class="link-text" href="/#contact-anchor"><i class="material-icons">chat_bubble</i>Contact</a>
+    </li>
+    <% if(currentUser){ %>
+    <li class="nav-item-menu">
+      <a class="nav-link" href="/logout"><i class="material-icons">account_circle</i>LogOut</a>
+    </li>
+    <% } %>
+  </ul>
+      <div class="hamburger">
+        <div id="rotate-top" class="line"></div>
+        <div id="rotate-bottom" class="line"></div>
+        <div id="remove-center" class="line"></div>
+      </div>
+<!-- Mobile navbar menu -->
+  <ul class="nav-menu">
+    <li class="nav-item-menu">
+        <a class="nav-link" href="/" onclick="hideMenu()">
+        <i class="material-icons">home</i>Home
+      </a>
+    </li>
+    <li class="nav-item-menu">
+      <a class="nav-link" href="/gallery" onclick="hideMenu()">
+        <i class="material-icons">view_module</i>Gallery
+      </a>
+    </li>
+    <li class="nav-item-menu">
+      <a class="nav-link" href="/#contact-anchor" onclick="hideMenu()">
+        <i class="material-icons">chat_bubble</i>Contact
+      </a>
+    </li>
+    <li class="nav-item-menu">
+      <a class="nav-link" href="/#bio-anchor" onclick="hideMenu()">
+        <i class="material-icons">accessibility_new</i>About
+      </a>
+    </li>
+<% if(currentUser){ %>
+<li class="nav-item-menu">
+  <a class="nav-link" href="/logout" onclick="hideMenu()"><i class="material-icons">account_circle</i>LogOut</a>
+</li>
+<% } %>
+  
+</nav>
+
+
+  
+  
+    
+        
+
+         
+        
+   
+
+
+  
+ 
+<!-- start of flash container -->
+ <div class="container-flash">
+   
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert" onclick="closeAlert()">
+                <%= error %>
+
+                <i class="material-icons">highlight_off</i>
+            </div>
+        <% } %>
+        
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-primary" role="alert" onclick="closeAlert()">
+                <%= success %>
+                <i class="material-icons">highlight_off</i>
+            </div>
+        <% } %>
+        
+    </div> 
+    <!-- end of flash container -->

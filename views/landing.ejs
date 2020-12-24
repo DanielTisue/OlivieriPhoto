@@ -1,0 +1,58 @@
+<% include ./partials/header %>
+
+
+
+<section class="landing">
+    <div class="landing-container">
+      <div class="logo2text">
+        <h2 class="pagetitle">Federico Olivieri Photography<span class="hide">&nbsp;&nbsp;&#8226;&nbsp;&nbsp;Toronto</span></h2>
+      </div>     
+      <img class="logotext" src="https://res.cloudinary.com/danieltisue/image/upload/v1596161473/oliveri.foto/WebsiteAssets/Asset6.svg">
+      
+    </div>
+</section> 
+
+<section class="bio">
+  <div class="bio-container" id="bio-anchor">
+    <h2 class="bio-title anim" data-delay="0s"><span class="hide">My name is Federico and&nbsp;</span>welcome to my work...</h2>
+    <div class="paragraph-text anim" data-delay="0.5s">
+      <p><span class="hide">I have lived all over the world but currently reside in Toronto, Canada.
+        <br><br></span>
+        I’m an experienced photographer with a special eye for captivating moments.
+        I’ve been attracted to all forms of art but felt a unique fascination with photography.
+        My work is my opportunity to share the way I view the world.
+        <br><br>
+        If you like artistic views, looking to learn more about photography, or are interested in my most recent content then check out my instagram and youtube channels. 
+        Contact me for artistic collaboration, events, portraits, or any other photography related interests
+      <br><br> 
+      </p>
+    </div>
+    <div class="image-container">
+      <img class="bio-photo" loading="lazy" src="https://res.cloudinary.com/danieltisue/image/upload/v1598045043/oliveri.foto/WebsiteAssets/Finalcd54e40025224b39b3dae9fa020e32b3.jpg">
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="contact-container">
+    <h2 class="contact-title anim" id="contact-anchor" data-delay="0s">Let's talk</h2>
+    <div class="form-wrapper">
+      <form class="landing-contact-form anim" data-delay=".5s" id="contact-form" action="send" method="POST">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Your name goes here">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Your email address goes here">
+        <label>Message</label>
+        <textarea name="message" id="form-message" cols="30" rows="10" placeholder="Let's talk..."></textarea>
+        <button class="submit-btn" type="submit" value="Send"><i class="material-icons">email</i>Send</button>
+      </form>
+    </div>
+
+  </div>
+  
+</section>
+
+
+ 
+    
+<% include ./partials/footer %>

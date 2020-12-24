@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+
+
+<h2 class="edit-title">Choose the image you would like to replace</h2>
+<div class="edit-container">
+<form class="edit-form" action="/gallery/<%= image._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <label class="edit-form-item" for="chooseFile">Choose from folder:</label>
+    <input class="edit-form-item" type="file" name="image" id="chooseFile">
+    <button class="edit-form-item submit-btn edit-btn" type="submit">Submit</button>
+   
+</form>
+
+
+</div>
+
+<a class="back" href="/gallery"><button class="edit-form-item submit-btn edit-btn">Back</button></a>
+
+
+<% include ./partials/footer %>
