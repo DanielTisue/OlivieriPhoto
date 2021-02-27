@@ -113,7 +113,8 @@ app.post('/send', (req, res) => {
 
   transporter.sendMail(mailOptions, function(err, data) {
     if (err) {
-       req.flash('error', 'Message not sent! Please send your email to info.olivieriphoto@gmail.com. Click on this alert to close.');
+      console.log(err);
+       req.flash('error', 'Message not sent! Please send your email to federicoolivieriphoto@gmail.com. Click on this alert to close.');
        res.redirect('/');
     } else {
        req.flash("success", "Your message has been sent! Click on this alert to close.");
